@@ -18,6 +18,6 @@ RUN yum clean all \
 
 EXPOSE 22
 
-WORKDIR ~
+WORKDIR /root/
 
 CMD ["/usr/sbin/sshd","-D"]
