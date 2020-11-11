@@ -15,4 +15,10 @@ RUN mkdir /root/service/
 
 WORKDIR /root/
 
+RUN ln -sf /etc/nginx/conf.d ./conf.d
+
+RUN rm -vf /root/conf.d/default.conf
+
+COPY VouCardService.conf /root/conf.d/
+
 CMD ["python3", "setup.py"]
